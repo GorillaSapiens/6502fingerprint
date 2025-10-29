@@ -1,0 +1,46 @@
+i went down a very deep rabbit hole, and this is what followed me home.
+
+working on a 6502 emulator, i wanted to add support for the undocumented opcodes.
+
+one of these is ARR #imm.  (x6B)
+
+i spent hours trying to figure out how this opcode works.
+
+i even found a wonderful set of test vectors at
+https://github.com/SingleStepTests/65x02
+
+long story short, it is unstable, and i was unable to find any solid implementations that matched the test vectors.
+
+also, the test vectors are incomplete.
+they contain only 10,000 tests each, when the entire search space is 2^18.
+(2^8 values for A * 2^8 values foe #imm * 2 values for C * 2 values for D).
+
+not enough for me to fully test any implementation i might come up with.
+
+i also found perfect6502 at
+https://github.com/mist64/perfect6502
+which allowed me to generate a complete set of tests.
+
+curiosly, it did not match well with ANY of the SingleStepTests.
+
+as i was giving up (it's unstable, there is no single solution),
+i realized that this could be leveraged to generate a unique fingerprint for different silicon versions.
+
+i analyzed the test vectors for differences, and found 4 tests that together would allow me to differentiate between:
+perfect6502
+SingleStepTests/6502
+SingleStepTests/nes6502
+SingleStepTests/rockwell65c02
+SingleStepTests/synertek65c02
+SingleStepTests/wdc65c02
+
+now, this doesn't mean i know what the fingerprints are;
+i would need real silicon or a complete set of 2^18 for each to calculate that.
+
+i was able to calculate it for perfect6502, obvs.
+
+maybe this will be useful to someone in some way.
+
+maybe people will come in after me and add some fingerprints to the registry.
+
+who knows?
