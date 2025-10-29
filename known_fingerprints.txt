@@ -1,0 +1,3 @@
+# fingerprints are CRC2:CRC1:CRC0
+# short name,fingerprint[,project_url]
+perfect6502,0f5071,https://github.com/mist64/perfect6502
