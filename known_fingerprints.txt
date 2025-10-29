@@ -1,3 +1,12 @@
 # fingerprints are CRC2:CRC1:CRC0
 # short name,fingerprint[,project_url]
 perfect6502,0f5071,https://github.com/mist64/perfect6502
+
+# unknown, but should be different from above
+# SingleStepTests/6502,??????,https://github.com/SingleStepTests/65x02
+# SingleStepTests/nes6502,??????,https://github.com/SingleStepTests/65x02
+# SingleStepTests/rockwell65c02,??????,https://github.com/SingleStepTests/65x02
+# SingleStepTests/synertek65c02,??????,https://github.com/SingleStepTests/65x02
+# SingleStepTests/wdc65c02,??????,https://github.com/SingleStepTests/65x02
+
+# future additions...
