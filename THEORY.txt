@@ -37,7 +37,7 @@ SingleStepTests/wdc65c02
 now, this doesn't mean i know what the fingerprints are;
 i would need real silicon or a complete set of 2^18 for each to calculate that.
 
-i was able to calculate it for perfect6502, obvs.
+but i was able to calculate it for perfect6502, obvs.
 
 maybe this will be useful to someone in some way.
 
