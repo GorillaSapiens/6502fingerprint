@@ -6,17 +6,18 @@
 ;   3) Probe #3  (d=1,c=0,a=F6,m=6B): A′, NVZC
 ;   4) Probe #4  (d=0,c=0,a=06,m=6B): A′, NVZC
 
-; ===== ENTRY POINT =====
-START
-    JSR RUN_ARR_FINGERPRINT
-    JMP *
-
 ; ===== ZERO PAGE SCRATCH =====
 RESA    = $00
 RESP    = $01
 CRC0    = $02
 CRC1    = $03
 CRC2    = $04
+
+.org 200
+; ===== ENTRY POINT =====
+START
+    JSR RUN_ARR_FINGERPRINT
+    JMP *
 
 ; ===== SAVE_P: store NVZC(P') masked =====
 SAVE_P
