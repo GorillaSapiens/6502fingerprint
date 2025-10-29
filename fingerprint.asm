@@ -1,3 +1,11 @@
+; ===== CONFIG (CRC-24/OPENPGP) =====
+; Poly = 0x864CFB, Init = 0xB704CE, RefIn/RefOut = false, XorOut = 0
+; We feed 8 bytes in this exact order:
+;   1) Probe #1  (d=0,c=1,a=E5,m=B8): A′, NVZC
+;   2) Probe #2  (d=0,c=1,a=36,m=6B): A′, NVZC
+;   3) Probe #3  (d=1,c=0,a=F6,m=6B): A′, NVZC
+;   4) Probe #4  (d=0,c=0,a=06,m=6B): A′, NVZC
+
 ; ===== ENTRY POINT =====
 START
     JSR RUN_ARR_FINGERPRINT
