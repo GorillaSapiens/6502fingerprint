@@ -13,7 +13,7 @@ long story short, it is unstable, and i was unable to find any solid implementat
 
 also, the test vectors are incomplete.
 they contain only 10,000 tests each, when the entire search space is 2^18.
-(2^8 values for A * 2^8 values foe #imm * 2 values for C * 2 values for D).
+(2^8 values for A * 2^8 values for #imm * 2 values for C * 2 values for D).
 
 not enough for me to fully test any implementation i might come up with.
 
