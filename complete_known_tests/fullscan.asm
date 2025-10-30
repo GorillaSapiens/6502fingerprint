@@ -17,10 +17,10 @@ arr_val:
 inc_a:
     INC lda_val+1
     BNE loop
-inc_imm
+inc_imm:
     INC arr_val+1
     BNE loop
-inc_d
+inc_d:
     LDA d_val
     CMP #$D8
     BEQ set_d
